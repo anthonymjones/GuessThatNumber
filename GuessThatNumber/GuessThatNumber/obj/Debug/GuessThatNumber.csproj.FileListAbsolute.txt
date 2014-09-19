@@ -4,3 +4,7 @@ C:\Users\anthonyjones\Documents\GitHub\GuessThatNumber\GuessThatNumber\GuessThat
 C:\Users\anthonyjones\Documents\GitHub\GuessThatNumber\GuessThatNumber\GuessThatNumber\bin\Debug\GuessThatNumber.pdb
 C:\Users\anthonyjones\Documents\GitHub\GuessThatNumber\GuessThatNumber\GuessThatNumber\obj\Debug\GuessThatNumber.exe
 C:\Users\anthonyjones\Documents\GitHub\GuessThatNumber\GuessThatNumber\GuessThatNumber\obj\Debug\GuessThatNumber.pdb
+C:\Users\anthonyjones\Documents\GitHub\GuessThatNumber\GuessThatNumber\GuessThatNumber\bin\Debug\EntityFramework.dll
+C:\Users\anthonyjones\Documents\GitHub\GuessThatNumber\GuessThatNumber\GuessThatNumber\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\anthonyjones\Documents\GitHub\GuessThatNumber\GuessThatNumber\GuessThatNumber\bin\Debug\EntityFramework.xml
+C:\Users\anthonyjones\Documents\GitHub\GuessThatNumber\GuessThatNumber\GuessThatNumber\bin\Debug\EntityFramework.SqlServer.xml

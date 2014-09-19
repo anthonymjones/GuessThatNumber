@@ -11,6 +11,7 @@ namespace GuessThatNumber
         static void Main(string[] args)
         {
             //Tell the user to guess a number, and call the numberGuess function
+            
             Console.WriteLine("\n\nLet's play a game. Guess what number I'm thinking of between 1 and 100.");
             NumberGuess();
 
