@@ -11,7 +11,7 @@ namespace GuessThatNumber
         static void Main(string[] args)
         {
             //Tell the user to guess a number, and call the numberGuess function
-            
+            Console.Title = "Guess That Number!";
             Console.WriteLine("\n\n Let's play a game. What number am I thinking of between 1 and 100?");
             NumberGuess();
 
@@ -82,49 +82,49 @@ namespace GuessThatNumber
                 }
             }
             //game over
-            AddHighScore(guessCount);
-            DisplayHighScores();
+            //AddHighScore(guessCount);
+            //DisplayHighScores();
         }
-        static void AddHighScore(int playerScore)
-        {
-            //get the player name for high scores
-            Console.WriteLine(" Your name:");
-            string playerName = Console.ReadLine();
+        //static void AddHighScore(int playerScore)
+        //{
+        //    //get the player name for high scores
+        //    Console.WriteLine(" Your name:");
+        //    string playerName = Console.ReadLine();
 
-            //create a gateway to the database
-            AnthonyEntities db = new AnthonyEntities();
+        //    //create a gateway to the database
+        //    spAnthonyEntities db = new spAnthonyEntities();
             
-            //create a new highscore object
-            HighScore newHighScore = new HighScore();
-            newHighScore.DateCreated = DateTime.Now;
-            newHighScore.Game = "Guess That Number";
-            newHighScore.Name = playerName;
-            newHighScore.Score = playerScore;
+        //    //create a new highscore object
+        //    HighScore newHighScore = new HighScore();
+        //    newHighScore.DateCreated = DateTime.Now;
+        //    newHighScore.Game = "Guess That Number";
+        //    newHighScore.Name = playerName;
+        //    newHighScore.Score = playerScore;
 
-            //add to the database
-            db.HighScores.Add(newHighScore);
+        //    //add to the database
+        //    db.HighScores.Add(newHighScore);
             
-            //save our changes
-            db.SaveChanges();
-        }
-        static void DisplayHighScores()
-        {
-            //clear the console
-            Console.Clear();
-            //Write the High Score Text
-            Console.WriteLine();
-            Console.WriteLine("                      Guess That Number High Scores");
-            Console.WriteLine("                      *****************************");
+        //    //save our changes
+        //    db.SaveChanges();
+        //}
+        //static void DisplayHighScores()
+        //{
+        //    //clear the console
+        //    Console.Clear();
+        //    //Write the High Score Text
+        //    Console.WriteLine();
+        //    Console.WriteLine("                      Guess That Number High Scores");
+        //    Console.WriteLine("                      *****************************");
 
-            //create a new connection to the db
-            AnthonyEntities db = new AnthonyEntities();
-            //get the high score list
-            List<HighScore> highScoreList = db.HighScores.Where(x => x.Game == "Guess That Number").OrderBy(x => x.Score).Take(10).ToList();
+        //    //create a new connection to the db
+        //    spAnthonyEntities db = new spAnthonyEntities();
+        //    //get the high score list
+        //    List<HighScore> highScoreList = db.HighScores.Where(x => x.Game == "Guess That Number").OrderBy(x => x.Score).Take(10).ToList();
 
-            foreach (HighScore highScore in highScoreList)
-            {
-                Console.WriteLine("                       {0}. {1} - {2} on {3}", highScoreList.IndexOf(highScore) + 1, highScore.Name, highScore.Score, highScore.DateCreated.Value.ToShortDateString());
-            }
-        }
+        //    foreach (HighScore highScore in highScoreList)
+        //    {
+        //        Console.WriteLine("                       {0}. {1} - {2} on {3}", highScoreList.IndexOf(highScore) + 1, highScore.Name, highScore.Score, highScore.DateCreated.Value.ToShortDateString());
+        //    }
+        //}
     }
 }
